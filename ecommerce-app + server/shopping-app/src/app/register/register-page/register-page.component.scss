@@ -1,0 +1,24 @@
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .register-content {
+    display: flex;
+    justify-content: center;
+    .content-left,
+    .content-right {
+      flex-direction: column;
+    }
+    .content-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .description {
+        h1 {
+          font-size: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

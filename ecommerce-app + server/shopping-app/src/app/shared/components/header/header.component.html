@@ -1,0 +1,40 @@
+<div class="header-wrapper">
+  <app-cart *ngIf="showCart" (toggleCart)="toggleShowCart()"></app-cart>
+  <div class="header-container">
+    <div class="logo">
+      <img
+        src="http://localhost:5001/static/images/logo.png"
+        alt="Shopping App Logo"
+      />
+    </div>
+    <div class="header-content">
+      <div class="top-strip">
+        <div class="links hidden-md-down">
+          <a routerLink="/authenticate" routerLinkActive="active">SignIn</a>
+          <a routerLink="/signup" routerLinkActive="active">Register</a>
+        </div>
+      </div>
+      <div class="bottom-strip">
+        <div class="header-menu">
+          <ul class="hidden-md-down">
+            <li>
+              <a routerLink="/homepage" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+              <a routerLink="/products" routerLinkActive="active">Products</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header-cart" (click)="toggleShowCart()">
+          <object
+            data="http://localhost:5001/static/images/cart.svg"
+            type="image/svg+xml"
+            width="32"
+            height="32"
+          ></object>
+          <span>0 items</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

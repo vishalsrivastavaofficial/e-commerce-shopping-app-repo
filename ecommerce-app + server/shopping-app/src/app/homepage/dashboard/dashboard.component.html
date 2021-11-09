@@ -1,0 +1,6 @@
+<app-banner></app-banner>
+<app-catagory-catalog
+  *ngFor="let catData of categories$ | async; let i = index"
+  [category]="catData"
+  class="my-1"
+></app-catagory-catalog>

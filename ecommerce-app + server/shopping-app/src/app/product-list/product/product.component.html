@@ -1,0 +1,16 @@
+<div class="product-wrapper">
+  <div class="product">
+    <h1>{{ productData?.name }}</h1>
+    <img
+      src="http://localhost:5001{{ productData?.imageURL }}"
+      alt="{{ productData?.description }}"
+    />
+    <div class="product-description">
+      <p>{{ productData?.description }}</p>
+    </div>
+    <div class="product-bottom my-1">
+      <div class="price">MRP Rs. {{ productData?.price }}</div>
+      <app-button-input name="Buy Now"></app-button-input>
+    </div>
+  </div>
+</div>

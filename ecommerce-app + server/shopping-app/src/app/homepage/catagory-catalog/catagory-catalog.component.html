@@ -1,0 +1,19 @@
+<section class="cc-wrapper my-1">
+  <div class="cc-container">
+    <div class="cc-content flex-row align-center">
+      <img
+        src="{{ 'http://localhost:5001' + category.imageUrl }}"
+        [alt]="category.name"
+      />
+    </div>
+    <div class="cc-content">
+      <h1>{{ category.name }}</h1>
+      <p>{{ category.description }}</p>
+      <app-button-input
+        name="Explore {{ category.name }}"
+        [routerLink]="['/products']"
+        [state]="{ id: category.id }"
+      ></app-button-input>
+    </div>
+  </div>
+</section>

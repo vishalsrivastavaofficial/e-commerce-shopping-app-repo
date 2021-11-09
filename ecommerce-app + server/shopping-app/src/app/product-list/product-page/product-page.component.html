@@ -1,0 +1,24 @@
+<section class="pl-wrapper">
+  <div class="pl-container container__row">
+    <div class="section-left container__col-12 container__col-md-3">
+      <ul class="side-menu my-1">
+        <li
+          *ngFor="let category of categories$ | async; let i = index"
+          (click)="filterItems(category.id)"
+          [ngClass]="{ 'active-list': category.id == selectedId }"
+        >
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="section-right container__col-12 container__col-md-9">
+      <div class="container__row my-1">
+        <app-product
+          *ngFor="let product of productsDisplay$ | async; let i = index"
+          class="container__col-12 container__col-md-6"
+          [productData]="product"
+        ></app-product>
+      </div>
+    </div>
+  </div>
+</section>
